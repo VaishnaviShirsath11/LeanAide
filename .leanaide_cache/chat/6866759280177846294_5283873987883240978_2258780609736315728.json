@@ -1,0 +1,23 @@
+{"usage":
+ {"total_tokens": 743,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 446,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 256,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 297},
+ "system_fingerprint": "fp_35c19d48ca",
+ "object": "chat.completion",
+ "model": "o1-mini-2024-09-12",
+ "id": "chatcmpl-AbOHwgB1pX8NPNKRFYaEQlWSBqcky",
+ "created": 1733474864,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "false\nThey apply to different types of α: roots of unity versus integers."},
+   "index": 0,
+   "finish_reason": "stop"}]}

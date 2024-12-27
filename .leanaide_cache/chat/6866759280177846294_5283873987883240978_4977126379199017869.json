@@ -1,0 +1,23 @@
+{"usage":
+ {"total_tokens": 666,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 364,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 256,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 302},
+ "system_fingerprint": "fp_19b7f0dcf1",
+ "object": "chat.completion",
+ "model": "o1-mini-2024-09-12",
+ "id": "chatcmpl-AbNcROFtgQfEDH4qPCnUW6l8tpFsI",
+ "created": 1733472291,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "false\nTheorem 2 is a general existence statement and does not specify the minimal degree of polynomials divisible by \\( n \\) for all integers \\( x \\)."},
+   "index": 0,
+   "finish_reason": "stop"}]}

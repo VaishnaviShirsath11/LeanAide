@@ -1,0 +1,76 @@
+{"usage":
+ {"total_tokens": 2905,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 2773,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 132},
+ "system_fingerprint": "fp_9d50cd990b",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-AbNk6l8MD2tSu0p3SwBoToV2s3Ed6",
+ "created": 1733472766,
+ "choices":
+ [{"message": {"role": "assistant", "refusal": null, "content": "∀ t, t"},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "Theorem t : Prop"},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "theorem show_t (t : Type) : t := sorry"},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message": {"role": "assistant", "refusal": null, "content": "`t`"},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "theorem show_t (t : α) : t = t :=\n  rfl"},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "∀ {t : Prop}, t → t"},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "Theorem t : Prop"},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "Sorry, the provided statement is incomplete and does not contain enough information to be accurately translated into Lean 4 code. Could you please provide more details or clarify the theorem statement?"},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "theorem show_t {t : Type*} : t := sorry"},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "Sorry, but I need more context or details to accurately translate the statement into Lean 4. Could you please provide the complete theorem statement?"},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

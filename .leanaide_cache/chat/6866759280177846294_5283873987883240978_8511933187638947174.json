@@ -1,0 +1,22 @@
+{"usage":
+ {"total_tokens": 574,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 403,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 128,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 171},
+ "system_fingerprint": "fp_35c19d48ca",
+ "object": "chat.completion",
+ "model": "o1-mini-2024-09-12",
+ "id": "chatcmpl-Ab4GDs0xTBFzWj51hhBFlwjpMfE96",
+ "created": 1733397877,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "false\nTheorem 1 is incomplete and does not match Theorem 2."},
+   "index": 0,
+   "finish_reason": "stop"}]}

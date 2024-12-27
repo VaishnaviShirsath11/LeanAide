@@ -1,0 +1,23 @@
+{"usage":
+ {"total_tokens": 935,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 554,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 320,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 381},
+ "system_fingerprint": "fp_35c19d48ca",
+ "object": "chat.completion",
+ "model": "o1-mini-2024-09-12",
+ "id": "chatcmpl-AbPg4LKCM73gGizaVh2PEP0Dc71ey",
+ "created": 1733480204,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "false\nTheorem 2 requires the polynomial f to have natural number coefficients, which is not assumed in Theorem 1."},
+   "index": 0,
+   "finish_reason": "stop"}]}

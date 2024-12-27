@@ -1,0 +1,23 @@
+{"usage":
+ {"total_tokens": 1145,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 467,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 640,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 678},
+ "system_fingerprint": "fp_cabd23548f",
+ "object": "chat.completion",
+ "model": "o1-mini-2024-09-12",
+ "id": "chatcmpl-Ab3iB5ci8Z36wbucgh85QAj4Xguv4",
+ "created": 1733395767,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "```json\nfalse\nTheorem 2 subtracts identical terms, resulting in zero, unlike Theorem 1.\n```"},
+   "index": 0,
+   "finish_reason": "stop"}]}

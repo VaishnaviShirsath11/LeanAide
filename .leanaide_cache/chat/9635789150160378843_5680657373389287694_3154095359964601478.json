@@ -1,0 +1,6 @@
+{"error":
+ {"type": "tokens",
+  "param": null,
+  "message":
+  "Rate limit reached for gpt-4o in organization org-A89dpTGHqzDdo6XzD8n9n8eT on tokens per min (TPM): Limit 30000, Used 28134, Requested 2710. Please try again in 1.688s. Visit https://platform.openai.com/account/rate-limits to learn more.",
+  "code": "rate_limit_exceeded"}}

@@ -1,0 +1,96 @@
+{"usage":
+ {"total_tokens": 4091,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 3417,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 674},
+ "system_fingerprint": "fp_831e067d82",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-AbOHmgFRN2zQrx8kd7gFeq9agpvB2",
+ "created": 1733474854,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ (n : ℕ) (α : ℂ), α ≠ 1 → IsPrimitiveRoot α (2 * n + 1) →\n  ∃ (p q : Polynomial ℤ), (p.eval α) ^ 2 + (q.eval α) ^ 2 = -1"},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ (n : ℕ) (α : ℂ), n > 0 → IsPrimitiveRoot α (2 * n + 1) → α ≠ 1 → ∃ (p q : ℤ[X]), (p.eval α) ^ 2 + (q.eval α) ^ 2 = -1"},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ (n : ℕ) (α : ℂ), n > 0 → α ≠ 1 → IsPrimitiveRoot α (2 * n + 1) →\n  ∃ (p q : Polynomial ℤ), (p.eval α) ^ 2 + (q.eval α) ^ 2 = -1"},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ (n : ℕ) (α : ℂ), n > 0 → IsPrimitiveRoot α (2 * n + 1) → α ≠ 1 → \n  ∃ (p q : Polynomial ℤ), (p.eval α) ^ 2 + (q.eval α) ^ 2 = -1"},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ (n : ℕ) (α : ℂ), 0 < n → IsPrimitiveRoot α (2 * n + 1) → α ≠ 1 →\n  ∃ (p q : Polynomial ℤ), (p.eval α) ^ 2 + (q.eval α) ^ 2 = -1"},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {n : ℕ} (α : ℂ), n > 0 → IsRootOfUnity (2 * n + 1) α → α ≠ 1 →\n  ∃ (p q : Polynomial ℤ), (Polynomial.eval α p) ^ 2 + (Polynomial.eval α q) ^ 2 = -1"},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ (n : ℕ) (α : ℂ), 0 < n → IsPrimitiveRoot α (2 * n + 1) → α ≠ 1 →\n  ∃ (p q : Polynomial ℤ), (p.eval α)^2 + (q.eval α)^2 = -1"},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ (n : ℕ) (α : ℂ), n > 0 → IsPrimitiveRoot α (2 * n + 1) → α ≠ 1 →\n  ∃ (p q : Polynomial ℤ), (p.eval α) ^ 2 + (q.eval α) ^ 2 = -1"},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ (n : ℕ) (α : ℂ), n > 0 → α ≠ 1 → IsPrimitiveRoot α (2 * n + 1) →\n  ∃ (p q : Polynomial ℤ), (p.eval α) ^ 2 + (q.eval α) ^ 2 = -1"},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ (n : ℕ) (α : ℂ), 0 < n → IsPrimitiveRoot α (2 * n + 1) → α ≠ 1 →\n  ∃ (p q : Polynomial ℤ), (p.eval α) ^ 2 + (q.eval α) ^ 2 = -1"},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

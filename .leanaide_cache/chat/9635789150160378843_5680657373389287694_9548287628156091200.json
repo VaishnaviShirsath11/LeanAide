@@ -1,0 +1,96 @@
+{"usage":
+ {"total_tokens": 3793,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 3088,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 705},
+ "system_fingerprint": "fp_9d50cd990b",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-AbOUkqi4Jptumq8wsmCg5sp0EhpzT",
+ "created": 1733475658,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ (n : ℕ), n ≥ 1 → f (n + 2) = (n + 3) * f (n + 1) + (-n - 2) * f n"},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ (n : ℕ), 1 ≤ n → f (n + 2) = (n + 3) * f (n + 1) + (-n - 2) * f n"},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ (n : ℕ), n ≥ 1 → let f : ℕ → ℕ := fun n => ∑ i in Finset.range n, Nat.factorial (i + 1) in\n  let P : ℕ → ℕ := fun x => x + 3 in\n  let Q : ℕ → ℕ := fun x => -x - 2 in\n  f (n + 2) = P n * f (n + 1) + Q n * f n"},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ (n : ℕ), 1 ≤ n → let f : ℕ → ℕ := λ n, ∑ i in Finset.range (n + 1), Nat.factorial i;\n  P : ℕ → ℕ := λ x, x + 3;\n  Q : ℕ → ℕ := λ x, -x - 2\n  in f (n + 2) = P n * f (n + 1) + Q n * f n"},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ (n : ℕ), 1 ≤ n → ∃ P Q : ℕ → ℤ, ∀ f : ℕ → ℤ, f (n + 2) = P n * f (n + 1) + Q n * f n"},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {n : ℕ}, 1 ≤ n → (let P x := x + 3; Q x := -x - 2 in f (n + 2) = P n * f (n + 1) + Q n * f n)"},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ (n : ℕ), 1 ≤ n → let f : ℕ → ℕ := λ n, Finset.sum (Finset.range n.succ) Nat.factorial in\n  f (n + 2) = (n + 3) * f (n + 1) + (-n - 2) * f n"},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ (n : ℕ), 1 ≤ n → ∃ (P Q : ℕ → ℤ), P n = n + 3 ∧ Q n = -n - 2 ∧\n  (let f : ℕ → ℤ := λ n, ∑ i in Finset.range n, Nat.factorial i in f (n + 2) = P n * f (n + 1) + Q n * f n)"},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ (n : ℕ), 1 ≤ n → f (n + 2) = (n + 3) * f (n + 1) + (-n - 2) * f n"},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ (n : ℕ), 1 ≤ n → let f : ℕ → ℕ := λ n, (Finset.range n).sum (λ i, Nat.factorial (i + 1)) in\n  f (n + 2) = (n + 3) * f (n + 1) + (-n - 2) * f n"},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

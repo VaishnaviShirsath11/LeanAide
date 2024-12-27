@@ -1,0 +1,23 @@
+{"usage":
+ {"total_tokens": 443,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 312,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 64,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 131},
+ "system_fingerprint": "fp_35c19d48ca",
+ "object": "chat.completion",
+ "model": "o1-mini-2024-09-12",
+ "id": "chatcmpl-Ab4FuYQZW0P3fG93eTXnVinZPKMDO",
+ "created": 1733397858,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "false\nTheorem 1 is simply labeled \"S\" without any content, while Theorem 2 makes a specific statement about Lean propositions."},
+   "index": 0,
+   "finish_reason": "stop"}]}

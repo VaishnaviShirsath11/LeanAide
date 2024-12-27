@@ -1,0 +1,96 @@
+{"usage":
+ {"total_tokens": 326,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 120,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 206},
+ "system_fingerprint": "fp_7f6be3efb0",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-AbONOTp7Yx8KoYbz3yvXF9T5jwjvs",
+ "created": 1733475202,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "There is a type in the universe `Sort ?u.26` for which the proposition `true` holds."},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "There exists a sort in the universe `?\\mathtt{u.26}` such that the proposition `true` holds by some unspecified axiom."},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "There exists a type in any universe level that satisfies the `sorryAx` assumption for the proposition `true`."},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "There exists a universe of any type that satisfies the axiom of truth in Lean."},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "There exists a proposition in any universe of types that is assumed to be true by an unspecified axiom."},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "There exists a type universe such that the axiom of truth holds in that universe."},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "There exists a type in some universe such that the statement \"true\" holds for it."},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "There exists a type in any universe level such that the proposition `true` holds in that type."},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "There exists a type in any universe level that satisfies the proposition `true`."},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "There exists a type in a universe `Sort u` such that a given axiom holds true for that type."},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

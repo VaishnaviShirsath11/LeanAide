@@ -1,0 +1,66 @@
+{"usage":
+ {"total_tokens": 2534,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 2487,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 47},
+ "system_fingerprint": "fp_831e067d82",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-AaeNWMsZQFCTggm6fLEGlxf2kXkKr",
+ "created": 1733298386,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "{W : Type u_1} → [inst : WeakOrder W] → Greedy W"},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message": {"role": "assistant", "refusal": null, "content": "Lean.Expr"},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "Lean.ParserDescr"},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "Lean.ParserDescr"},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message": {"role": "assistant", "refusal": null, "content": "Lean.Name"},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "Lean.ParserDescr"},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "Lean.ParserDescr"},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "Lean.ParserDescr"},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "Lean.ParserDescr"},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "Line → Line → Prop"},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

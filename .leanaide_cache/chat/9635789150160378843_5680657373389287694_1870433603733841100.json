@@ -1,0 +1,96 @@
+{"usage":
+ {"total_tokens": 3465,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 3002,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 463},
+ "system_fingerprint": "fp_7f6be3efb0",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-Ab4GFVBwlSIKyHYDxi1slofoALZNm",
+ "created": 1733397879,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∫ (x : ℝ) in 0 ..∞, (Real.arctan (Real.pi * x) - Real.arctan x) / x = (Real.pi / 2) * Real.log Real.pi"},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∫ (x : ℝ) in 0 ..∞, (Real.arctan (Real.pi * x) - Real.arctan x) / x = (Real.pi / 2) * Real.log Real.pi"},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∫ (x : ℝ) in 0 ..∞, (Real.arctan (Real.pi * x) - Real.arctan x) / x = (Real.pi / 2) * Real.log Real.pi"},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∫ x in 0..∞, (Real.arctan (Real.pi * x) - Real.arctan x) / x = (Real.pi / 2) * Real.log Real.pi"},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∫ (x : ℝ) in Set.Ioi 0, (Real.arctan (Real.pi * x) - Real.arctan x) / x = (Real.pi / 2) * Real.log Real.pi"},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∫ (x : ℝ) in 0 ..∞, (Real.arctan (Real.pi * x) - Real.arctan x) / x = (Real.pi / 2) * Real.log Real.pi"},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∫ (x : ℝ) in 0 ..∞, ((Real.arctan (Real.pi * x) - Real.arctan x) / x) = (Real.pi / 2) * Real.log Real.pi"},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∫ (x : ℝ) in 0 ..∞, ((Real.arctan (Real.pi * x) - Real.arctan x) / x) = (Real.pi / 2) * Real.log Real.pi"},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∫ x in 0..∞, (Real.arctan (Real.pi * x) - Real.arctan x) / x = (Real.pi / 2) * Real.log Real.pi"},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∫ (x : ℝ) in 0 ..∞, (Real.arctan (Real.pi * x) - Real.arctan x) / x = (Real.pi / 2) * Real.log Real.pi"},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

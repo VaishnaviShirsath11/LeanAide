@@ -1,0 +1,89 @@
+{"usage":
+ {"total_tokens": 2176,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 1943,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 233},
+ "system_fingerprint": "fp_831e067d82",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-AaeNZCF7CSJRU3XrIAd43fBthEZKL",
+ "created": 1733298389,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "{α : Type u} → [inst : LinearOrder α] → (α → Prop) → α → α"},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "def greatestOdd (n : ℕ) : ℕ :=\n  if n % 2 = 1 then n else n - 1"},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "{α : Type u_1} → [inst : LinearOrder α] → (α → Prop) → α"},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "{α : Type u_1} → [inst : LinearOrderedSemiring α] → α → α"},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "{α : Type u} → [inst : LinearOrder α] → α → α"},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "{α : Type u_1} → [inst : LinearOrder α] → α → α"},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "def greatestOdd (n : ℕ) : ℕ :=\n  if n % 2 = 1 then n else n - 1"},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "{α : Type u} → [inst : LinearOrder α] → α → α"},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "def greatest_odd (n : ℕ) : ℕ := if n % 2 = 1 then n else n - 1"},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "{α : Type u_1} → [inst : LinearOrder α] → α → α"},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

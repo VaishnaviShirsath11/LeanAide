@@ -1,0 +1,81 @@
+{"usage":
+ {"total_tokens": 2538,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 2305,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 233},
+ "system_fingerprint": "fp_c7ca0ebaca",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-AbNYW4gkruYc9c2qnOpFa6vOh3wJ7",
+ "created": 1733472048,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "∀ {α : Type u} {p : α → Prop}, (∃ x, p x) → Nonempty α"},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "{α : Type u} → {β : Type v} → (p : α → β) → Function.Surjective p → Nonempty α"},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "{P : Prop} → P → P"},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "{P : Prop} → P → P"},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {α : Type u} {p : α → Prop} {s : Set α} [decidable_pred s], (∀ x, x ∈ s ↔ p x) → (∀ x, x ∈ s = p x)"},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "{α : Type u} → ∀ (a : α), a = a"},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "{α : Type u} → α"},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "∀ {α : Sort u} (a : α), a = a"},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "{P : Prop} → P → P"},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "{α : Type u} → {β : Type v} → (p : α → β) → (q : α → Prop) → (r : β → Prop) → (∀ x, q x → r (p x)) → ∀ y, r y"},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

@@ -1,0 +1,96 @@
+{"usage":
+ {"total_tokens": 583,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 188,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 395},
+ "system_fingerprint": "fp_c7ca0ebaca",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-AbNYXL8rfvC7VqfR2923uarpypH5j",
+ "created": 1733472049,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For any type $α$ with a linear order and any subset $s$ of $α$, the subset $s$ has a partial well-ordering if and only if it is well-founded."},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For any type $α$ with a linear order, and any subset $s$ of $α$, the subset $s$ is partially well-ordered if and only if it is well-founded."},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For any type $\\alpha$ with a linear order and any subset $s$ of $\\alpha$, the subset $s$ is partially well-ordered if and only if $s$ is well-founded."},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For any type $\\alpha$ with a linear order and any subset $s$ of $\\alpha$, the subset $s$ is partially well-ordered if and only if it is well-founded."},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For any type $\\alpha$ with a linear order and any subset $s$ of $\\alpha$, the subset $s$ is partially well-ordered if and only if it is well-founded."},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For any type $\\alpha$ with a linear order and any set $s$ of elements of $\\alpha$, the set $s$ is partially well-ordered if and only if it is well-founded."},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For any type $\\alpha$ with a linear order and any subset $s$ of $\\alpha$, the subset $s$ is partially well ordered if and only if it is well-founded."},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For any type $\\alpha$ with a linear order and any subset $s$ of $\\alpha$, the subset $s$ is partially well-ordered if and only if it is well-founded."},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For any type $\\alpha$ with a linear order and any subset $s$ of $\\alpha$, the subset $s$ is partially well-ordered if and only if it is well-founded."},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For any type $α$ with a linear order and any subset $s$ of $α$, the subset $s$ is partially well-ordered if and only if it is well-founded."},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

@@ -1,0 +1,96 @@
+{"usage":
+ {"total_tokens": 476,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 131,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 345},
+ "system_fingerprint": "fp_9d50cd990b",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-AbNYYdw5qZK1kdqYBPHVR6rHj7TEQ",
+ "created": 1733472050,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For any type $\\alpha$ and any elements $a$ and $b$ of $\\alpha$, if $a = b$, then $b = a$."},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For any type $\\alpha$ and any elements $a$ and $b$ of that type, if $a$ is equal to $b$, then $b$ is equal to $a$."},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For any type $\\alpha$ and any elements $a$ and $b$ of $\\alpha$, if $a$ equals $b$, then $b$ equals $a$."},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For any type $\\alpha$ and any elements $a$ and $b$ of that type, if $a$ equals $b$, then $b$ equals $a$."},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For any type $\\alpha$ and any elements $a$ and $b$ of $\\alpha$, if $a$ equals $b$, then $b$ equals $a$."},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "The theorem states that for any type $\\alpha$ and any elements $a$ and $b$ of that type, if $a = b$, then $b = a$."},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For any type $\\alpha$ and any elements $a$ and $b$ of that type, if $a$ equals $b$, then $b$ equals $a$."},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For any type $\\alpha$ and any elements $a$ and $b$ of that type, if $a = b$, then $b = a$."},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For any type $\\alpha$ and elements $a, b$ of that type, if $a = b$, then $b = a$."},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For any type $\\alpha$ and any elements $a$ and $b$ of that type, if $a = b$, then $b = a$."},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

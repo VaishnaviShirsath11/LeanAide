@@ -1,0 +1,92 @@
+{"usage":
+ {"total_tokens": 2412,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 2111,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 301},
+ "system_fingerprint": "fp_7f6be3efb0",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-Ab4FqSyGV8KX6tBEjDpoVMgij6isu",
+ "created": 1733397854,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {α : Type u} {f : Filter α} {g : α → Filter β}, f.has_basis (λ a, true) g ↔ f = ⨅ a, g a"},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "Theorem sho {α : Type u} (f : α → α) : True := trivial"},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "{C : Type u} [inst : CategoryTheory.Category.{v, u} C],\n  Monotone (CategoryTheory.Limits.WidePushoutShape.Hom.toWalkingCospan)"},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {α : Type u} [inst : LinearOrder α] {s : Set α} {a b : α},\n  a ∈ LowerBounds s → b ∈ UpperBounds s → a ≤ b"},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "∀ {M : Type u} [inst : TopologicalSpace M], Sho inst"},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {S : Type u_1} [inst : Setoid S] (a b : S), Quot.mk Setoid.r a = Quot.mk Setoid.r b → a ≈ b"},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "∀ {α : Type u_1} [inst : LinearOrder α], Sho α"},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "Sho : ∀ {X Y : Scheme}, X ⟶ Y → Prop"},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {X : Type} [inst : TopologicalSpace X] (hX : Sho X), T1Space X"},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ [inst : WType.WP] {x : WType.Proc} (a : WType.Act), WType.Sho a x = WType.Sho a x"},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

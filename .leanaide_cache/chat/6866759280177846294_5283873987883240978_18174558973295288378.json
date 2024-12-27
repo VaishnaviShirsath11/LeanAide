@@ -1,0 +1,23 @@
+{"usage":
+ {"total_tokens": 608,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 372,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 192,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 236},
+ "system_fingerprint": "fp_35c19d48ca",
+ "object": "chat.completion",
+ "model": "o1-mini-2024-09-12",
+ "id": "chatcmpl-AbNquUQxfNEk69aLFkCmV5SbHdglK",
+ "created": 1733473188,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "false\nTheorem 1 pertains to a probability involving perfect squares, while Theorem 2 asserts the existence of a function from ℕ to ℝ."},
+   "index": 0,
+   "finish_reason": "stop"}]}

@@ -1,0 +1,23 @@
+{"usage":
+ {"total_tokens": 1147,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 526,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 576,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 621},
+ "system_fingerprint": "fp_35c19d48ca",
+ "object": "chat.completion",
+ "model": "o1-mini-2024-09-12",
+ "id": "chatcmpl-AbPAu0qrI8HVbovE9poCBbzoTPUl9",
+ "created": 1733478272,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "false\nThey state different results: Theorem 1 relates a specific sum to the expression, while Theorem 2 only asserts the validity of the expression itself."},
+   "index": 0,
+   "finish_reason": "stop"}]}

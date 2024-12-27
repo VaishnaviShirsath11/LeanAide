@@ -1,0 +1,96 @@
+{"usage":
+ {"total_tokens": 594,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 176,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 418},
+ "system_fingerprint": "fp_9d50cd990b",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-AbOHspnUTvhoVB8ydp7Mmqy9ENlVk",
+ "created": 1733474860,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For every integer $\\alpha$, there exist polynomials $p$ and $q$ such that the sum of the squares of their evaluations at $\\alpha$ equals $-1$."},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For every integer $\\alpha$, there exist polynomials $p$ and $q$ such that the sum of the squares of their evaluations at $\\alpha$ equals $-1$."},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For every integer $\\alpha$, there exist polynomials $p$ and $q$ such that the sum of the squares of their evaluations at $\\alpha$ is equal to $-1$; i.e., $\\exists p, q$ such that $\\text{Polynomial.eval}(\\alpha, p)^2 + \\text{Polynomial.eval}(\\alpha, q)^2 = -1$."},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For every integer $\\alpha$, there exist polynomials $p$ and $q$ such that the sum of the squares of their evaluations at $\\alpha$ equals $-1$."},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For every integer $\\alpha$, there exist polynomials $p$ and $q$ such that the sum of the squares of their evaluations at $\\alpha$ equals $-1$."},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For every integer $\\alpha$, there exist polynomials $p$ and $q$ such that the sum of the squares of their evaluations at $\\alpha$ equals $-1$."},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For every integer $\\alpha$, there exist polynomials $p$ and $q$ such that the sum of the squares of their evaluations at $\\alpha$ equals $-1$."},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For every integer $\\alpha$, there exist polynomials $p$ and $q$ such that the sum of the squares of their evaluations at $\\alpha$ equals $-1$."},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "The theorem states that for every integer $\\alpha$, there exist polynomials $p$ and $q$ such that the sum of the squares of their evaluations at $\\alpha$ equals $-1$."},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "For every integer $\\alpha$, there exist polynomials $p$ and $q$ such that the evaluation of $p$ at $\\alpha$ squared plus the evaluation of $q$ at $\\alpha$ squared equals $-1$."},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

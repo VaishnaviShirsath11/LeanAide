@@ -1,0 +1,96 @@
+{"usage":
+ {"total_tokens": 6236,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 5191,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 1045},
+ "system_fingerprint": "fp_7f6be3efb0",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-Ab1pzzVYgQbpKmp3FHvm1aBLzCxyp",
+ "created": 1733388563,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {V : Type u_1} {P : Type u_2} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [inst_2 : MetricSpace P]\n  [inst_3 : NormedAddTorsor V P] (A B C X Y Z : P),\n  X ∈ segment ℝ B C → Y ∈ segment ℝ C A → Z ∈ segment ℝ A B → True"},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {V : Type u_1} {P : Type u_2} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [inst_2 : MetricSpace P]\n  [inst_3 : NormedAddTorsor V P] {A B C X Y Z : P},\n  X ∈ segment ℝ B C → Y ∈ segment ℝ C A → Z ∈ segment ℝ A B → True"},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {V : Type u_1} {P : Type u_2} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [inst_2 : MetricSpace P]\n  [inst_3 : NormedAddTorsor V P] {A B C X Y Z : P},\n  X ∈ segment ℝ B C → Y ∈ segment ℝ C A → Z ∈ segment ℝ A B → True"},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {V : Type u} {P : Type v} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [inst_2 : MetricSpace P]\n  [inst_3 : NormedAddTorsor V P] {A B C X Y Z : P},\n  X ∈ lineSegment ℝ B C → Y ∈ lineSegment ℝ C A → Z ∈ lineSegment ℝ A B → ∃ t : Affine.Triangle ℝ P, t = ⟨A, B, C⟩"},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {V : Type u_1} {P : Type u_2} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [inst_2 : MetricSpace P]\n  [inst_3 : NormedAddTorsor V P] (A B C X Y Z : P),\n  X ∈ segment ℝ B C → Y ∈ segment ℝ C A → Z ∈ segment ℝ A B → True"},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {V : Type u_1} {P : Type u_2} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [inst_2 : MetricSpace P]\n  [inst_3 : NormedAddTorsor V P] {A B C X Y Z : P},\n  X ∈ segment ℝ B C → Y ∈ segment ℝ C A → Z ∈ segment ℝ A B → Prop"},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {V : Type u_1} {P : Type u_2} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [inst_2 : MetricSpace P]\n  [inst_3 : NormedAddTorsor V P] {A B C X Y Z : P},\n  X ∈ segment ℝ B C ∧ Y ∈ segment ℝ C A ∧ Z ∈ segment ℝ A B → True"},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {V : Type u_1} {P : Type u_2} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [inst_2 : MetricSpace P]\n  [inst_3 : NormedAddTorsor V P] {A B C X Y Z : P},\n  X ∈ segment ℝ B C → Y ∈ segment ℝ C A → Z ∈ segment ℝ A B → True"},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {V : Type u_1} {P : Type u_2} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [inst_2 : MetricSpace P]\n  [inst_3 : NormedAddTorsor V P] (A B C X Y Z : P),\n  X ∈ segment ℝ B C → Y ∈ segment ℝ C A → Z ∈ segment ℝ A B → True"},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {V : Type u_1} {P : Type u_2} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V] [inst_2 : MetricSpace P]\n  [inst_3 : NormedAddTorsor V P] (A B C X Y Z : P),\n  X ∈ segment ℝ B C → Y ∈ segment ℝ C A → Z ∈ segment ℝ A B → True"},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

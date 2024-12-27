@@ -1,0 +1,23 @@
+{"usage":
+ {"total_tokens": 790,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 521,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 192,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 269},
+ "system_fingerprint": "fp_cabd23548f",
+ "object": "chat.completion",
+ "model": "o1-mini-2024-09-12",
+ "id": "chatcmpl-AbNYuW0tqrs11StKj5CZVHvIf6OcZ",
+ "created": 1733472072,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "false\nTheorem 2 includes k = 0 in the summation, which is undefined, whereas Theorem 1 sums from k = 1 to n."},
+   "index": 0,
+   "finish_reason": "stop"}]}

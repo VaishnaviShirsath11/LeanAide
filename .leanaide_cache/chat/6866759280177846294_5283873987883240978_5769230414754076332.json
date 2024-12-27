@@ -1,0 +1,23 @@
+{"usage":
+ {"total_tokens": 747,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 446,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 256,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 301},
+ "system_fingerprint": "fp_35c19d48ca",
+ "object": "chat.completion",
+ "model": "o1-mini-2024-09-12",
+ "id": "chatcmpl-AbOUtXdt05sy5fReRG8fk5OCBM3uX",
+ "created": 1733475667,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "```json\nfalse\nTheorem 2 is a general statement for any function f, while Theorem 1 applies specifically to the factorial sum function.\n```"},
+   "index": 0,
+   "finish_reason": "stop"}]}

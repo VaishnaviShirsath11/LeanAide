@@ -152,7 +152,7 @@ def leanToolchain : IO String := do
 def picklePath (descField : String) : IO System.FilePath := do
   let name := if descField == "docString" then "prompts" else descField
   return ".lake"/ "build" / "lib" /
-    s!"mathlib4-{name}-embeddings-{← leanToolchain}.olean"
+    s!"mathlib4-{name}-ada-embeddings-{← leanToolchain}.olean"
 
 def jsonLines [ToJson α] (jsl : Array α) : String :=
   let lines := jsl.map (fun j => Json.compress <| toJson j)

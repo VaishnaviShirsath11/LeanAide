@@ -1,0 +1,23 @@
+{"usage":
+ {"total_tokens": 622,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 388,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 192,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 234},
+ "system_fingerprint": "fp_35c19d48ca",
+ "object": "chat.completion",
+ "model": "o1-mini-2024-09-12",
+ "id": "chatcmpl-AbOADH0WDt1CeFfmli1uyzqU8x5lK",
+ "created": 1733474385,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "false\nTheorem 1 asserts the existence of a square in a specific sequence, while Theorem 2 states a general existence of a function."},
+   "index": 0,
+   "finish_reason": "stop"}]}

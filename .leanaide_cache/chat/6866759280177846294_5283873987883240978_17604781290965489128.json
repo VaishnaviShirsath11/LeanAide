@@ -1,0 +1,23 @@
+{"usage":
+ {"total_tokens": 675,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 493,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 128,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 182},
+ "system_fingerprint": "fp_35c19d48ca",
+ "object": "chat.completion",
+ "model": "o1-mini-2024-09-12",
+ "id": "chatcmpl-AbNrG1boSwtXyYXUzW6VBxne1ly18",
+ "created": 1733473210,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "false\nTheorem 1 discusses the asymptotic behavior of a probability related to perfect squares, while Theorem 2 involves the existence of a property and limits of product functions, which are different concepts."},
+   "index": 0,
+   "finish_reason": "stop"}]}

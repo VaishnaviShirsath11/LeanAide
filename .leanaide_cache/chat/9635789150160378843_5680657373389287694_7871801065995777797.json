@@ -1,0 +1,79 @@
+{"usage":
+ {"total_tokens": 2214,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 1984,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 230},
+ "system_fingerprint": "fp_831e067d82",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-AaH1ANW1GmoPEQovUtaT2VVWnx5BW",
+ "created": 1733208588,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "(p q : ℕ) → Nat.Prime p ∧ Nat.Prime q ∧ (p = q + 2 ∨ q = p + 2)"},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "(p q : ℕ) → Prop"},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "(ℕ × ℕ) → Prop"},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "(p q : ℕ) → Prop"},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "def TwinPrime (p q : ℕ) : Prop := Nat.Prime p ∧ Nat.Prime q ∧ (p = q + 2 ∨ q = p + 2)"},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "(p₁ p₂ : ℕ) → Nat.Prime p₁ → Nat.Prime p₂ → p₂ = p₁ + 2"},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "Structure TwinPrime : Type where\n  p q : ℕ\n  hp : p.Prime\n  hq : q.Prime\n  diff_eq_two : q = p + 2"},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "(ℕ × ℕ) → Prop"},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message": {"role": "assistant", "refusal": null, "content": "ℕ → ℕ → Prop"},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "def TwinPrime (p q : ℕ) : Prop := Nat.Prime p ∧ Nat.Prime q ∧ (p = q + 2 ∨ q = p + 2)"},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

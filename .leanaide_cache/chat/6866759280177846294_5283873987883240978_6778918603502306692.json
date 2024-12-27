@@ -1,0 +1,23 @@
+{"usage":
+ {"total_tokens": 927,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 386,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 512,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 541},
+ "system_fingerprint": "fp_35c19d48ca",
+ "object": "chat.completion",
+ "model": "o1-mini-2024-09-12",
+ "id": "chatcmpl-Ab4Owvin9VuwRnRN6ZO5EVULiUP6e",
+ "created": 1733398418,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "false\nTheorem 1 is incomplete and does not specify the transitivity property."},
+   "index": 0,
+   "finish_reason": "stop"}]}

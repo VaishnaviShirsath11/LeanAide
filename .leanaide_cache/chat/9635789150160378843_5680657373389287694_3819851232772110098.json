@@ -1,0 +1,87 @@
+{"usage":
+ {"total_tokens": 2703,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 2501,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 202},
+ "system_fingerprint": "fp_831e067d82",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-AaH1AdOrRi51pqxGOabEuNbZuiqtM",
+ "created": 1733208588,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "Sorry, I cannot provide a translation for an incomplete or empty statement. Could you please provide more detail or context for the translation?"},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "Sorry, it looks like there is nothing to translate from your request. Could you please provide more information or context?"},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "Sorry, I cannot generate Lean code for an undefined statement. Could you please provide more details or specify a complete definition or theorem statement?"},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "Sorry, I need more context or details to provide an accurate translation into Lean 4 code. Could you please provide additional information or clarify the statement?"},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "{T : Type u_1} → T"},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "Sorry, I need more information to provide the Lean code translation. Could you please provide more details or context?"},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "Sorry, I need more information to provide a translation. Could you please clarify or provide more details?"},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "{α : Type u} → Unit"},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "Sorry, I need more information to provide the Lean code. Could you please provide the specific details or context for the definition you're referring to?"},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "{α : Type u} → α"},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

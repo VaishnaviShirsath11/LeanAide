@@ -1,0 +1,96 @@
+{"usage":
+ {"total_tokens": 3155,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 2868,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 287},
+ "system_fingerprint": "fp_9d50cd990b",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-AbNcM4YW1OUm12KTmCPD9DDZ2HtEX",
+ "created": 1733472286,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "I'm sorry, but the provided statement seems incomplete. Please provide the full statement for translation."},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "I'm sorry, the provided statement seems to be incomplete. Could you please provide the complete statement for translation?"},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "I'm sorry, it seems that the given statement is incomplete. Could you please provide the rest of the statement or clarify your request?"},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "I'm sorry, but the statement appears to be incomplete. Could you please provide the full statement so I can accurately translate it into Lean 4 code for you?"},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "I'm sorry, but the statement appears to be incomplete. Could you please provide the full statement so that I can accurately translate it into Lean 4?"},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "I'm sorry, it seems there is an incomplete statement. Could you please provide the complete theorem or any additional context?"},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "I'm sorry, but the statement appears to be incomplete or unclear. Could you provide the complete theorem statement or clarify the parts that are missing?"},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "I'm sorry, but the provided statement seems incomplete. Can you please provide the complete theorem statement you would like translated into Lean 4?"},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "Sorry, the provided statement appears to be incomplete. Could you please provide the complete statement for translation?"},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "```lean\ntheorem minimal_degree_monic_integral_polynomial_divisible (n : ℤ) :\n  ∃ f : Polynomial ℤ, Polynomial.Monic f ∧ (∀ x : ℤ, n ∣ f.eval x) ∧ f.degree = k n :=\nsorry\n```"},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

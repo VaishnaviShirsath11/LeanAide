@@ -1,0 +1,23 @@
+{"usage":
+ {"total_tokens": 727,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 317,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 384,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 410},
+ "system_fingerprint": "fp_cabd23548f",
+ "object": "chat.completion",
+ "model": "o1-mini-2024-09-12",
+ "id": "chatcmpl-AbNYa5TGtBiDhauIT82abFHoo22lv",
+ "created": 1733472052,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "false\nThe first statement is incomplete and does not specify a theorem."},
+   "index": 0,
+   "finish_reason": "stop"}]}

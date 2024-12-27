@@ -1,0 +1,90 @@
+{"usage":
+ {"total_tokens": 3820,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 3463,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 357},
+ "system_fingerprint": "fp_831e067d82",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-AaK3tSL0NrpqPclNngwoAd1Teh1hW",
+ "created": 1733220289,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "{R : Type u_1} [inst : CommSemiring R] (n : ℕ) (s : Finset R) (k : ℕ) : R :=\n  (Finset.powersetLen k s).sum (λ t, t.prod id)"},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "{R : Type u} → [inst : CommSemiring R] → List R → ℕ → R"},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "{R : Type u_1} → [inst : CommSemiring R] → List R → ℕ → R"},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "{s : Type u} → [fintype s] → (a : s → ℕ) → ℕ → ℕ"},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "{R : Type u_1} → [inst : CommSemiring R] → (List R) → ℕ → R"},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "def elementary_symmetric {R : Type u_1} [CommSemiring R] (k : ℕ) (a : Finset R) : R :=\n  (Finset.powersetLen k a).sum (Finset.prod id)"},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "def elementary_symmetric {R : Type u} [CommSemiring R] (k : ℕ) (a : Finset R) : R :=\n  (Finset.powersetLen k a).sum (λ t, t.prod id)"},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "{R : Type u} → [inst : CommSemiring R] → List R → ℕ → R"},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "{R : Type u_1} → [inst : CommSemiring R] → List R → ℕ → R"},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "def esymm {R : Type u_1} [CommSemiring R] (k : ℕ) (a : List R) : R :=\n(List.powersetLen k a).sum (List.prod)"},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

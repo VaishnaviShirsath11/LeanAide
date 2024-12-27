@@ -1,0 +1,77 @@
+{"usage":
+ {"total_tokens": 2047,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 1874,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 173},
+ "system_fingerprint": "fp_831e067d82",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-AbNYUIEiGEiV17p0amrjoEMEZhTZ3",
+ "created": 1733472046,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "Theorem Shpw : ∀ {α : Type}, Prop"},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "Theorem Shpw : ∀ {α : Type u} [PartialOrder α] {s : Set α}, s.IsShell → s.IsPwo."},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "Theorem Shpw : Type u → Prop"},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "Theorem Shpw : ∀ "},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "Theorem Shpw : Type"},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message": {"role": "assistant", "refusal": null, "content": "Shpw"},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {α : Type u_1} {R : Type u_2} [inst : OrderedRing R] [inst_1 : AddCommGroup α] [inst_2 : Module R α]\n  {x y z : α}, Sbtw R x y z ↔ Wbtw R x y z"},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "Shpw : Theorem"},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "∀ {α : Type u} [inst : LinearOrder α] (s : Set α), s.IsShpw"},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "Theorem Shpw : Prop"},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

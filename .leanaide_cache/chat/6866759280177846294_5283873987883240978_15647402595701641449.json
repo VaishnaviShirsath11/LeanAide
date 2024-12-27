@@ -1,0 +1,23 @@
+{"usage":
+ {"total_tokens": 1113,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 492,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 576,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 621},
+ "system_fingerprint": "fp_35c19d48ca",
+ "object": "chat.completion",
+ "model": "o1-mini-2024-09-12",
+ "id": "chatcmpl-AbNYtHWOXyIwqnvjJYTzkY6Bb2dHe",
+ "created": 1733472071,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "false\nTheorem 2 omits the floor functions present in Theorem 1."},
+   "index": 0,
+   "finish_reason": "stop"}]}

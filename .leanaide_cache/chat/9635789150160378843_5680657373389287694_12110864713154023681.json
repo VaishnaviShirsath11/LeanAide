@@ -1,0 +1,86 @@
+{"usage":
+ {"total_tokens": 2252,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 1996,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 256},
+ "system_fingerprint": "fp_9d50cd990b",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-AbNYXug6upWyoqsItQsupcePJEeXk",
+ "created": 1733472049,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "{C : Type u} → [inst : CategoryTheory.Category.{v, u} C] → C"},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "Sorry, the statement \"Show th\" is incomplete. Could you please provide the full theorem statement for translation?"},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "{C : Type u} →\n  [inst : CategoryTheory.Category.{v, u} C] →\n    [inst_1 : CategoryTheory.Limits.HasBinaryProducts C] →\n      [inst_2 : CategoryTheory.Limits.HasPullbacks C] →\n        ∀ (F : CategoryTheory.Functor CategoryTheory.Limits.WalkingParallelPair C),\n          CategoryTheory.Limits.IsLimit\n            (CategoryTheory.Limits.HasEqualizersOfHasPullbacksAndBinaryProducts.equalizerCone F)"},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "Sorry, the statement seems to be incomplete. Could you please provide the complete theorem statement?"},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "Sorry, the provided statement seems incomplete. Could you please provide the full statement for translation into Lean 4?"},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "{P : Prop} → P → P"},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "Sorry, the statement seems to be incomplete. Could you please provide the full theorem statement for translation?"},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "{P : Prop} → P → P"},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "Sorry, the statement you provided seems to be incomplete. Could you please provide the full statement for translation?"},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "{P : Prop} → P → P"},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

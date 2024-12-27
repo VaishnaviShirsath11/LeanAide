@@ -1,0 +1,96 @@
+{"usage":
+ {"total_tokens": 3876,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 3315,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 561},
+ "system_fingerprint": "fp_831e067d82",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-Ab40Ygp5wE9cyLA6ekrqFAobt1KE2",
+ "created": 1733396906,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ (n : ℕ) (z : Fin n → ℂ),\n  |Complex.re ((Finset.sum Finset.univ fun i => z i ^ 2) ^ (1/2 : ℂ))| ≤\n    Finset.sum Finset.univ fun i => |Complex.re (z i)|"},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {n : ℕ} {z : Fin n → ℂ},\n  |Complex.re (Finset.univ.sum (fun i => z i ^ 2)).sqrt.re| ≤\n    Finset.univ.sum (fun i => |(z i).re|)"},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {n : ℕ} (z : Fin n → ℂ), |((∑ i, z i ^ 2) ^ (1 / 2 : ℂ)).re| ≤ ∑ i, |(z i).re|"},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {n : ℕ} {z : Fin n → ℂ}, |(∑ i, z i ^ 2).sqrt.re| ≤ ∑ i, |(z i).re|"},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {n : ℕ} (z : Fin n → ℂ),\n  |((Finset.univ.sum fun i => z i ^ 2) ^ (1 / 2)).re| ≤ Finset.univ.sum fun i => |(z i).re|"},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ (n : ℕ) (z : Fin n → ℂ),\n  |((Finset.univ.sum fun i => (z i) ^ 2).sqrt).re| ≤ Finset.univ.sum fun i => |(z i).re|"},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {n : ℕ} {z : Fin n → ℂ},\n  |((Finset.univ.sum (fun i => (z i) ^ 2)).sqrt).re| ≤ Finset.univ.sum (fun i => |(z i).re|)"},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ (n : ℕ) (z : Fin n → ℂ),\n  |(Finset.sum (Finset.range n) fun i => z i ^ 2).sqrt.re| ≤ (Finset.sum (Finset.range n) fun i => |(z i).re|)"},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ (n : ℕ) (z : Fin n → ℂ),\n  |((Finset.univ.sum fun i => z i ^ 2).sqrt.re)| ≤ Finset.univ.sum fun i => |(z i).re|"},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {n : ℕ} {z : Fin n → ℂ},\n  |(Finset.univ.sum (fun i => z i ^ 2)).sqrt.re| ≤ (Finset.univ.sum fun i => |(z i).re|)"},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

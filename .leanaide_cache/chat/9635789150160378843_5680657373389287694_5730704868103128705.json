@@ -1,0 +1,86 @@
+{"usage":
+ {"total_tokens": 2316,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 2051,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 265},
+ "system_fingerprint": "fp_831e067d82",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-AbNYO5X9UDYgbgmcVJvQhqNBcnK8Q",
+ "created": 1733472040,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "∀ {R : Type u} [inst : Semiring R] (x : R), x * 0 = 0"},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {G : Type u} [inst : Group G] (a b : G), a * b = b * a ↔ a = b⁻¹"},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "∀ {R : Type u} [inst : Semiring R] (a : R), a + 0 = a"},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "∀ {G : Type u} [inst : Group G] (g : G), g⁻¹ * g = 1"},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "∀ {G : Type u} [inst : Group G], ∀ (g : G), g⁻¹ * g = 1"},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "∀ {α : Type u} [inst : LinearOrder α] (a b : α), min a b ≤ a"},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "∀ {α : Type u} (a b c : α), a = b → b = c → a = c"},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {R : Type u} [inst : Ring R] (x y : R), (x + y) ^ 2 = x ^ 2 + 2 * x * y + y ^ 2"},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "∀ {α : Type u} (a b : α), a = b → b = a"},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "∀ {α : Type u}, α → α"},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

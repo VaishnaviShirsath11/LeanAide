@@ -1,0 +1,78 @@
+{"usage":
+ {"total_tokens": 2369,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 2155,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 214},
+ "system_fingerprint": "fp_9d50cd990b",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-AaeNtsZHuLybMLgEVKkO9RbzEGW6f",
+ "created": 1733298409,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "def greatestOddDivisor (n : ℕ) : ℕ := n.div2 * 2 + n.bodd"},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "def greatestOddDivisor (n : ℕ) : ℕ := n.div2^(n.log2)"},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message": {"role": "assistant", "refusal": null, "content": "ℕ → ℕ"},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message": {"role": "assistant", "refusal": null, "content": "ℕ → ℕ"},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "def delgreatest_odd_divisor (n : ℕ) : ℕ := n.factors.filter (λ x, x % 2 = 1).prod"},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message": {"role": "assistant", "refusal": null, "content": "ℕ → ℕ"},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "def delgreatest_odd_divisor (n : ℕ) : ℕ :=\n  if h : n = 0 then 0 else n.factors.erase 2.prod"},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message": {"role": "assistant", "refusal": null, "content": "ℕ → ℕ"},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "def greatestOddDivisor (n : ℕ) : ℕ :=\n  if n = 0 then 0 else n.div2 * 2 + 1"},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "def greatestOddDivisor (n : ℕ) : ℕ :=\n  n.divisors.filter (λ d, d % 2 = 1) |> List.foldl max 1"},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

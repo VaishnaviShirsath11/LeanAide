@@ -1,0 +1,23 @@
+{"usage":
+ {"total_tokens": 745,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 363,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 320,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 382},
+ "system_fingerprint": "fp_35c19d48ca",
+ "object": "chat.completion",
+ "model": "o1-mini-2024-09-12",
+ "id": "chatcmpl-AbNhGPjd2oRW3Elz0ZANOkCLjF8ua",
+ "created": 1733472590,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "false\nTheorem 1 requires \\( c \\) to be a non-negative integer, whereas Theorem 2 allows any integer."},
+   "index": 0,
+   "finish_reason": "stop"}]}

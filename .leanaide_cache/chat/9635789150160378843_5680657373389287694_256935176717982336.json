@@ -1,0 +1,82 @@
+{"usage":
+ {"total_tokens": 2092,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 1928,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 164},
+ "system_fingerprint": "fp_7f6be3efb0",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-Ab3hkrqOEwWCNN6ABBjwWgpiR660r",
+ "created": 1733395740,
+ "choices":
+ [{"message": {"role": "assistant", "refusal": null, "content": "⊤ = ⊤"},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "Sorry, it seems like the theorem statement is incomplete. Could you please provide the complete statement that you would like translated into Lean 4?"},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "-- The theorem statement appears to be incomplete. Please provide the full statement for translation."},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "Sorry, I need more information or context to provide an accurate translation of the theorem into Lean 4. Could you please provide the full statement of the theorem?"},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "Sorry, I'm unable to provide a translation without further details or context about the theorem. Could you provide additional information or clarify the statement?"},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "∀ (P : Prop), P → P"},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "-- Please provide the complete theorem statement so it can be translated into Lean 4."},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message": {"role": "assistant", "refusal": null, "content": "Theorem"},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "Sorry, the input seems incomplete. Could you please provide the complete statement for translation?"},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant", "refusal": null, "content": "Theorem Example : ℕ → ℕ"},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}

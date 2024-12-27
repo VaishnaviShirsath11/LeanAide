@@ -1,0 +1,92 @@
+{"usage":
+ {"total_tokens": 2380,
+  "prompt_tokens_details": {"cached_tokens": 0, "audio_tokens": 0},
+  "prompt_tokens": 2052,
+  "completion_tokens_details":
+  {"rejected_prediction_tokens": 0,
+   "reasoning_tokens": 0,
+   "audio_tokens": 0,
+   "accepted_prediction_tokens": 0},
+  "completion_tokens": 328},
+ "system_fingerprint": "fp_90354628f2",
+ "object": "chat.completion",
+ "model": "gpt-4o-2024-08-06",
+ "id": "chatcmpl-AbNYU509MVQzKZPLyaydgkXOmZxkY",
+ "created": 1733472046,
+ "choices":
+ [{"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "∀ {α : Type u_1} {r : α → α → Prop}, Set.Shpw r ↔ Set.Spw r"},
+   "logprobs": null,
+   "index": 0,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "∀ {α : Type u} {r : α → α → Prop}, Set.SHPW r → Set.PWO r"},
+   "logprobs": null,
+   "index": 1,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {V : Type u} {E : V → Type v} [inst : Π (v : V), PartialOrder (E v)], Shpw E"},
+   "logprobs": null,
+   "index": 2,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "∀ {α : Type u} (s : Set α), s.IsSH ↔ s.IsPH"},
+   "logprobs": null,
+   "index": 3,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content": "∀ {α : Type u} (s : Set α), s.IsPWO → s.IsPWO.holds_shpw"},
+   "logprobs": null,
+   "index": 4,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {α : Type u_1} {β : Type u_2} [inst : PartialOrder α] [inst_1 : PartialOrder β] {s : Set α} {t : Set β},\n  s.IsPWO → t.IsPWO → (s ×ˢ t).IsPWO"},
+   "logprobs": null,
+   "index": 5,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {α : Type u_1} {r : α → α → Prop} [inst : IsStrictTotalOrder α r], Set.SHPW r"},
+   "logprobs": null,
+   "index": 6,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {α : Type u_1} {r : α → α → Prop}, StrictWeakOrder r → IsIrrefl α r"},
+   "logprobs": null,
+   "index": 7,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {α : Type u} [inst : PartialOrder α] {s : Set α}, s.StronglyPartialHypoOrdered → s.PartiallyWellOrdered"},
+   "logprobs": null,
+   "index": 8,
+   "finish_reason": "stop"},
+  {"message":
+   {"role": "assistant",
+    "refusal": null,
+    "content":
+    "∀ {α : Type u_1} [inst : LinearOrder α] {s : Set α}, s.IsPWO ↔ s.IsWF"},
+   "logprobs": null,
+   "index": 9,
+   "finish_reason": "stop"}]}
