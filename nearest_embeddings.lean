@@ -6,8 +6,8 @@ import Lean.Data.Json
 import Batteries.Util.Pickle
 open Lean Cache.IO
 
-unsafe def checkAndFetch (descField: String) : IO Unit := do
-  let picklePath ← picklePath descField
+unsafe def checkAndFetch : IO Unit := do
+  let picklePath ← picklePathnew
   let picklePresent ←
     if ← picklePath.pathExists then
     IO.eprintln s!"Pickle file already present at {picklePath}"
@@ -37,9 +37,9 @@ unsafe def main (args: List String) : IO Unit := do
         |>.getD inp,
       j.getObjValAs? Nat "n" |>.toOption.getD 10,
       j.getObjValAs? Float "penalty" |>.toOption.getD 2.0)
-  checkAndFetch descField
+  checkAndFetch
   logTimed s!"finding nearest to `{doc}`"
-  let picklePath ← picklePath descField
+  let picklePath ← picklePathnew
   withUnpickle  picklePath <|
     fun (data : EmbedData) => do
     let embs ← nearestDocsToDocFull data doc num (penalty := penalty)

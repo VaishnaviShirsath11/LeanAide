@@ -331,14 +331,16 @@ macro "#session" n:ident ":=" t:term : command => do
     `(def $n : Session := $t
     #eval sessionLogs $n))
 
+/-
 #session eg' := do
-  consider "There are infinitely many even numbers"
+  consider "There are infinitely many odd numbers"
   setRoundTrip true
   translateText
   save `small
   consider (← putnamProblem 57)
-  discard <|  chatQuery "Are there infinitely many even numbers?"
+  discard <|  chatQuery "Are there infinitely many odd numbers?"
   -- discard docsText
+-/
 
 /-
 def LeanAide.Translate.eg' : Session :=
@@ -347,53 +349,39 @@ do
   setRoundTrip true
   translateText
 -/
-#print eg'
+--#print eg'
 
 #session putnam_eg := do
-  for i in [15:45] do
+  for i in [115:125] do
     consider (← putnamProblem i)
-    -- translateText
+    setRoundTrip true
+    translateText
+
+#session tryex := do
+  consider ("Sum of two odd numbers is even.")
+  setRoundTrip true
+  translateText
+
+
+
+#session putnam91 := do
+  consider (← putnamProblem 91)
+  setRoundTrip true
+  translateText
 
 #session translate_def_eg := do
-  translateDef " A twin prime is a pair of prime numbers that differ by two." `prime
-
+  translateDef "Let \\( \\delta(x) \\) be the greatest odd divisor of the positive integer \\( x \\)" `δ
 
 #session eg_add_def := do
   sayM getRelDefs
-  --checkElab "(0 : Nat) = 1"
-  --checkElab "eg = 1"
+  checkElab "(0 : Nat) = 1"
+  checkElab "eg = 1"
   add_def%
     "Hello"
     def egg : Nat := Nat.zero
   sayM getRelDefs
   checkElab "egg"
-  --sayM <| messages "scrambled egg"
-
-
-#session putnam' := do
-    consider (← putnamProblem 156)
-    -- translateText
-
-#session translate_kfold := do
-  translateDef "Let $s_k (a_1, a_2, \\dots, a_n)$ denote the $k$-th elementary symmetric function; that is, the sum of all $k$-fold products of the $a_i$. For example, $s_1 (a_1, \\dots, a_n) = \\sum_{i=1}^{n} a_i$, and $s_2 (a_1, a_2, a_3) = a_1a_2 + a_2a_3 + a_1a_3$" `kf
-
-#session quasi := do
-  translateDef "Let $\\sigma(N)$ denote the sum of all positive integer divisors of $N$, including $1$ and $N$. Call a positive integer $N$ \\textit{quasiperfect} if $\\sigma(N) = 2N + 1$." `quasiperfect
-
-def quas : (N : ℕ) → Prop := fun N  => N > (0:Nat) ∧ (Finset.sum (Nat.divisors N) id = (2:Nat) * N + (1:Nat))
-
-#session quastranslate := do
-      consider "Using the quas definition prove that every quas number is the square of an odd integer."
-      setRoundTrip true
-      translateText
-
-
-
-
-
-
-
-
+  sayM <| messages "scrambled egg"
 
 
 -- Avoid this
@@ -402,8 +390,6 @@ def quas : (N : ℕ) → Prop := fun N  => N > (0:Nat) ∧ (Finset.sum (Nat.divi
   discard <|  docs "There are infinitely many odd numbers"
 
 end LeanAide.Translate
-
-#eval egg
 
 #check ExistsUnique
 

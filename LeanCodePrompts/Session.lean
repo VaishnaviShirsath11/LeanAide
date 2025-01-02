@@ -331,6 +331,7 @@ macro "#session" n:ident ":=" t:term : command => do
     `(def $n : Session := $t
     #eval sessionLogs $n))
 
+/-
 #session eg' := do
   consider "There are infinitely many odd numbers"
   setRoundTrip true
@@ -339,6 +340,7 @@ macro "#session" n:ident ":=" t:term : command => do
   consider (← putnamProblem 57)
   discard <|  chatQuery "Are there infinitely many odd numbers?"
   -- discard docsText
+-/
 
 /-
 def LeanAide.Translate.eg' : Session :=
@@ -347,7 +349,7 @@ do
   setRoundTrip true
   translateText
 -/
-#print eg'
+--#print eg'
 
 #session putnam_eg := do
   for i in [15:45] do
