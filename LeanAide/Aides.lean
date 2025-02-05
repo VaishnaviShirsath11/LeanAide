@@ -160,7 +160,7 @@ def leanToolchain : IO String := do
 
 def picklePath (descField : String) : IO System.FilePath := do
   let name := if descField == "docString" then "prompts" else descField
-  return ".lake"/ "build" / "lib" /
+  return (← baseDir)/".lake"/ "build" / "lib" /
     s!"mathlib4-{name}-embeddings-{← leanToolchain}.olean"
 
 def jsonLines [ToJson α] (jsl : Array α) : String :=
@@ -288,12 +288,14 @@ def structuralTerm (stx: Syntax) : MetaM Bool := do
 
 def openAIKey? : IO (Option String) := IO.getEnv "OPENAI_API_KEY"
 
-#eval openAIKey?
-
 def openAIKey : IO String := do
   match ← openAIKey? with
       | some k => return k
       | none =>
+          let path : System.FilePath := "private" / "OPENAI_API_KEY"
+          if (← path.pathExists) then
+            return (← IO.FS.readFile path).trim
+          else
           let path : System.FilePath := "rawdata" / "OPENAI_API_KEY"
           if (← path.pathExists) then
             return (← IO.FS.readFile path).trim
@@ -326,12 +328,19 @@ def appendFile (fname : FilePath) (content : String) : IO Unit := do
   h.putStrLn content
   h.flush
 
-def appendLog (logFile: String) (content : Json) : IO Unit := do
-  let dir : FilePath := "rawdata"
-  if !(← dir.pathExists) then
-        IO.FS.createDirAll dir
-  let fname : FilePath := "rawdata/" / ("log_" ++ logFile ++ ".jsonl")
-  appendFile fname content.compress
+def appendLog (logFile: String) (content : Json) (force: Bool := false) : IO Unit := do
+  if force then go logFile content
+  else
+    match (← leanAideLogging?) with
+    | some "0" => return ()
+    | some _ => go logFile content
+    | none => return ()
+  where go (logFile: String) (content: Json) : IO Unit := do
+    let dir : FilePath := "leanaide_logs"
+    if !(← dir.pathExists) then
+      IO.FS.createDirAll dir
+    let fname : FilePath := "leanaide_logs" / (logFile ++ ".jsonl")
+    appendFile fname content.compress
 
 def gitHash : IO String := do
   let hash ← IO.Process.output { cmd := "git", args := #["rev-parse", "--short", "HEAD"] }
@@ -484,7 +493,7 @@ elab "detailed" t:term : term => do
   logInfo m!"{← ppExpr e}"
   return e
 
-#check detailed (fun (n : Nat) => n + 1)
+-- #check detailed (fun (n : Nat) => n + 1)
 
 def delabMatchless (e: Expr) : MetaM Syntax := withOptions (fun o₁ =>
                     -- let o₂ := pp.motives.all.set o₁ true
@@ -542,7 +551,13 @@ def relLCtxAux (goal: Expr) (decls: List LocalDecl) : MetaM Expr := do
 def relLCtx (mvarId : MVarId) : MetaM Expr :=
   mvarId.withContext do
     let decls := (← getLCtx).decls.toArray |>.filterMap id
-    let decls := decls[1:].toArray
+    let decls := decls.filter fun decl =>
+      !decl.isImplementationDetail
+    relLCtxAux (← mvarId.getType) decls.toList
+
+def relLCtx' (mvarId : MVarId) : MetaM Expr :=
+  mvarId.withContext do
+    let decls := (← getLCtx).decls.toArray |>.filterMap id
     relLCtxAux (← mvarId.getType) decls.toList
 
 def groups := ["train", "test", "valid"]

@@ -26,16 +26,16 @@ syntax (name := thmCommand) "#theorem" (ident)? (":")? str : command
   | _ => throwUnsupportedSyntax
   where go (s: String) (stx: Syntax) (name? : Option Name) : TermElabM Unit := do
     if s.endsWith "." then
-      let translator : Translator := {server := ← chatServer, pb := PromptExampleBuilder.embedBuilder (← promptSize) (← conciseDescSize) 0, params := ← chatParams}
+      let translator : Translator := {server := ← chatServer, pb := PromptExampleBuilder.embedBuilder (← promptSize) (← conciseDescSize) (← descSize), params := ← chatParams}
       let (js, _) ←
         translator.getLeanCodeJson  s |>.run' {}
+      let e? ←
+        jsonToExprFallback js (← greedy) !(← chatParams).stopColEq |>.run' {}
       let name ← match name? with
       | some name => pure name
       | none =>
           translator.server.theoremName s
       let name := mkIdent name
-      let e? ←
-        jsonToExprFallback js (← greedy) !(← chatParams).stopColEq |>.run' {}
       match e? with
       | .ok e =>
         logTimed "obtained expression"
@@ -248,4 +248,4 @@ syntax (name := askCommand) "#ask" (num)? str : command
     else
       logWarning "To make a query, end the string with a `.` or `?`."
 
-#check TryThis.Suggestion
+-- #check TryThis.Suggestion

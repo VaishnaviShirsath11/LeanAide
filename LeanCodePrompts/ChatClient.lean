@@ -62,11 +62,11 @@ end ChatParams
 
 
 inductive ChatServer where
-  | openAI (model: String := "gpt-4o")
+  | openAI (model: String := "gpt-4o") (authHeader? : Option String := none)
   | azure (deployment: String := "GPT4TestDeployment")
-      (model: String := "GPT-4")
+      (model: String := "GPT-4") (authHeader? : Option String := none)
   | google (model: String := "gemini-1.5-pro-001") (location: String := "asia-south1")
-  | generic (model: String) (url: String) (hasSysPropmpt : Bool := false)
+  | generic (model: String) (url: String) (authHeader? : Option String) (hasSysPropmpt : Bool := false)
   deriving Repr, FromJson, ToJson, DecidableEq, Hashable
 
 namespace ChatServer
@@ -82,51 +82,68 @@ initialize pendingQueries :
   IO.Ref (Array (ChatServer × Json × ChatParams)) ← IO.mkRef #[]
 
 def url : ChatServer → IO String
-  | openAI _ =>
+  | openAI _ _ =>
       return "https://api.openai.com/v1/chat/completions"
-  | azure deployment _ =>
+  | azure deployment _ _ =>
       azureURL deployment
   | google _ location => do
       let url ←  pure s!"https://{location}-aiplatform.googleapis.com/v1beta1/projects/{← projectID}/locations/{location}/endpoints/openapi/chat/completions"
       -- IO.eprintln s!"Google URL: {url}"
       return url
-  | generic _ url _ =>
-      return url++"/v1/chat/completions"
+  | generic _ url .. =>
+      return url
 
 def model : ChatServer → String
-  | openAI model => model
-  | azure _ model => model
-  | generic model _ _ => model
+  | openAI model _ => model
+  | azure _ model _ => model
+  | generic model .. => model
   | google model _ => "google/" ++ model
 
 def hasSysPrompt : ChatServer → Bool
-  | openAI model => !(model.startsWith "o1")
-  | azure _ _ => true
-  | generic _ _ b => b
+  | openAI model _ => !(model.startsWith "o")
+  | azure _ _ _ => true
+  | generic _ _ _ b => b
   | google _ _ => true
 
+
 def authHeader? : ChatServer → IO (Option String)
-  | openAI _ => do
+  | openAI _ h? => match h? with
+    | some h => pure h
+    | none =>  do
     let key ←  openAIKey
     return some <|"Authorization: Bearer " ++ key
-  | azure .. => do
+  | azure _ _ h? => match h? with
+    | some h => pure h
+    | none => do
     let key? ← azureKey
     let key :=
     match key? with
       | some k => k
       | none => panic! "AZURE_OPENAI_KEY not set"
     return some <| "api-key: " ++ key
-  | generic .. =>
-    return none
+  | generic _ _ h? _ =>
+    return h?
   | google _ _ => do
     let key ← IO.Process.run {cmd := "gcloud", args := #["auth", "print-access-token"]}
     return some <|"Authorization: Bearer " ++ key.trim
+
+def addKey (key: String) : ChatServer → ChatServer
+| .generic model url _ p => .generic model url (some <|"Authorization: Bearer " ++ key) p
+| .openAI model _ => .openAI model <| some <|"Authorization: Bearer " ++ key
+| .azure deployment model _ => .azure deployment model <| some <| "api-key: " ++ key
+| x => x
+
+
+def addKeyOpt (key?: Option String) (cs : ChatServer) : ChatServer :=
+  match key? with
+  | some key => addKey key cs
+  | none => cs
 
 def queryAux (server: ChatServer)(messages : Json)(params : ChatParams) : CoreM Json := do
   let stopJs := Json.mkObj <| if params.stopTokens.isEmpty then [] else
     [("stop", Json.arr <| params.stopTokens |>.map Json.str)]
   let dataJs := Json.mkObj [("model", server.model), ("messages", messages)
-  , ("temperature", Json.num params.temp), ("n", params.n), ("max_completion_tokens", params.maxTokens)]
+  , ("temperature", Json.num params.temp), ("n", params.n)]
   let dataJs := dataJs.mergeObj stopJs
   let data := dataJs.pretty
   trace[Translate.info] "Model query: {data}"
@@ -162,6 +179,7 @@ def queryAux (server: ChatServer)(messages : Json)(params : ChatParams) : CoreM 
     return .null
 
 def query (server: ChatServer)(messages : Json)(params : ChatParams) : CoreM Json := do
+  IO.eprintln s!"Querying: {toJson server |>.compress}"
   -- logInfo s!"Querying {server.model}"
   let file : System.FilePath :=
     (← cachePath) / "chat" /
@@ -175,7 +193,8 @@ def query (server: ChatServer)(messages : Json)(params : ChatParams) : CoreM Jso
     | Except.error e =>
       IO.eprintln s!"Error parsing JSON: {e}; source: {output}"
       let result ←  queryAux server messages params
-      IO.FS.writeFile file result.pretty
+      unless (result.getObjVal? "error").toOption.isSome do
+        IO.FS.writeFile file result.pretty
       return result
   else
     -- IO.eprintln s!"Querying server"
@@ -223,7 +242,7 @@ def cachedQuery (server: ChatServer)(messages : Json)
 
 def dataPath (server: ChatServer) : IO  FilePath := do
   match server with
-  | azure deployment _ => do
+  | azure deployment _ _ => do
     let path := llmDir / "azure" / deployment
     IO.FS.createDirAll path
     return path
@@ -431,7 +450,7 @@ def completions (server: ChatServer)
   (examples: Array ChatExample := #[]): CoreM (Array String) := do
   let messages ←  mkMessages queryString examples sysPrompt !(server.hasSysPrompt)
   let data ← ChatServer.query server messages params
-  match data.getObjValAs? Json "choices" with
+  match data.getObjVal? "choices" with
   | Except.error _ =>
     throwError m!"no choices field in {data}"
   | Except.ok data =>
@@ -468,7 +487,7 @@ def solve (server: ChatServer)
   ChatServer.mathCompletions server queryString n params examples
 
 def checkEquivalence
-  (thm1 thm2 : String) (defBlob? : Option String) (server: ChatServer := ChatServer.openAI "o1-mini")
+  (thm1 thm2 : String) (defBlob? : Option String) (server: ChatServer := ChatServer.openAI "o3-mini")
   (params: ChatParams := {})
   (examples: Array ChatExample := #[]): CoreM (Array <| Bool × String) := do
   let queryString ←
@@ -547,7 +566,7 @@ def structuredProofFromStatement (server: ChatServer)
 
 def theoremName (server: ChatServer)
   (statement: String): CoreM Name := do
-    let query := s!"Give a name following the conventions of the Lean Prover and Mathlib for the theorem: \n{statement}\n\nGive ONLY the name of the theorem."
+    let query := s!"Give a name following the conventions of the Lean Prover 4 and Mathlib for the theorem: \n{statement}\n\nNote that types and propositions are capitalized in Lean 4. Give ONLY the name of the theorem."
     let namesArr ←  server.mathCompletions query 1
     let llm_name := namesArr.get! 0 |>.replace "`" ""
           |>.replace "\""  "" |>.trim
