@@ -32,7 +32,7 @@ unsafe def process_loop (env: Environment) (stdin stdout : IO.FS.Stream)
 
 unsafe def launchProcess (p : Parsed) : IO UInt32 := do
   searchPathRef.set compile_time_search_path%
-  let translator : Translator := Translator.ofCli p
+  let translator : Translator ←  Translator.ofCli p
   IO.eprintln <| toJson translator
   let env ←
     importModules #[{module := `Mathlib},
@@ -67,6 +67,7 @@ unsafe def leanAideProcess : Cmd := `[Cli|
     t, temperature : Nat;  "Scaled temperature `t*10` for temperature `t` (default 8)."
     m, model : String ; "Model to be used (default `gpt-4o`)"
     azure; "Use Azure instead of OpenAI."
+    gemini; "Use Gemini with OpenAI API."
     url : String; "URL to query (for a local server)."
     examples_url : String; "URL to query for nearby embeddings (for a generic server)."
     auth_key : String; "Authentication key (for a local or generic server)."

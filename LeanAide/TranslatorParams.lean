@@ -1,11 +1,12 @@
 import LeanAide.PromptBuilder
+import LeanAide.TomlConfig
 import Cli
 
 namespace LeanAide
 
 open Cli Translator Lean
 
-def Translator.ofCli (p: Parsed) : Translator :=
+def Translator.ofCli (p: Parsed) : IO Translator :=
   let numSim := p.flag? "prompts" |>.map (fun s => s.as! Nat)
     |>.getD 20
   let numConcise := p.flag? "concise_descriptions" |>.map (fun s => s.as! Nat)
@@ -41,7 +42,7 @@ def Translator.ofCli (p: Parsed) : Translator :=
   let temp : JsonNumber := ⟨temp10, 1⟩
   let gemini := p.hasFlag "gemini"
   let model := p.flag? "model" |>.map (fun s => s.as! String)
-    |>.getD (if gemini then "gemini-2.0-flash-exp" else "gpt-4o")
+    |>.getD (if gemini then "gemini-2.0-flash" else "gpt-4o")
   let azure := p.hasFlag "azure"
   let maxTokens := p.flag? "max_tokens" |>.map (fun s => s.as! Nat)
     |>.getD 1600
@@ -50,7 +51,7 @@ def Translator.ofCli (p: Parsed) : Translator :=
   let authKey? := p.flag? "auth_key" |>.map (fun s => s.as! String)
   let chatServer :=
     if azure then ChatServer.azure else
-    if gemini then ChatServer.google model else
+    if gemini then .gemini model else
         match url? with
         | some url =>
           ChatServer.generic model url none !sysLess
@@ -59,7 +60,7 @@ def Translator.ofCli (p: Parsed) : Translator :=
   let chatParams : ChatParams :=
     {temp := temp, n := queryNum, maxTokens := maxTokens}
   let translator : Translator := {pb := pb, server := chatServer, params := chatParams}
-  translator
+  translator.configureToml
 
 def Translator.configure (translator: Translator) (config: Json) : Translator :=
   let n := config.getObjValAs? Nat "n" |>.toOption.getD translator.params.n
@@ -83,7 +84,7 @@ def Translator.configure (translator: Translator) (config: Json) : Translator :=
         let sysLess := server.getObjValAs? Bool "no_sysprompt" |>.toOption
           |>.getD false
         if azure then ChatServer.azure else
-        if gemini then ChatServer.google model else
+        if gemini then .gemini model else
             match url? with
             | some url => ChatServer.generic model url none !sysLess
             | none => ChatServer.openAI model

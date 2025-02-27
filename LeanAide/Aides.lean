@@ -302,6 +302,19 @@ def openAIKey : IO String := do
           else
             panic! "OPENAI_API_KEY not set"
 
+def geminiAPIKey? : IO (Option String) := IO.getEnv "GEMINI_API_KEY"
+
+def geminiAPIKey : IO String := do
+  match ← geminiAPIKey? with
+      | some k => return k
+      | none =>
+          let path : System.FilePath := "private" / "GEMINI_API_KEY"
+          if (← path.pathExists) then
+            return (← IO.FS.readFile path).trim
+          else
+            panic! "GEMINI_API_KEY not set"
+
+
 def azureKey : IO (Option String) := IO.getEnv "AZURE_OPENAI_KEY"
 
 def azureEndpoint : IO (Option String) := IO.getEnv "AZURE_OPENAI_ENDPOINT"
@@ -372,6 +385,9 @@ def codeBlock? (code: String) (s: String) : Option String := do
   let split ←   s.splitOn s!"```{code}" |>.get? 1 |>.orElse fun _ =>
     s.splitOn "```" |>.get? 1
   split.splitOn "```" |>.get? 0
+
+def extractLean (s: String) : String :=
+  codeBlock? "lean" s |>.getD s
 
 def extractJson (s: String) : Json :=
   let code := codeBlock? "json" s |>.getD s
