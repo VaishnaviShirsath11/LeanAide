@@ -366,7 +366,7 @@ def ifSkeleton (context: Array Json) (discr: String) (qp: CodeGenerator) : Trans
   let discrTerm? ←
     theoremExprInContext? context discr qp
   match discrTerm? with
-  | Except.error e =>
+  | Except.error _ =>
     mkNoteTactic s!"Failed to translate condition {discr}"
   | Except.ok discrTerm => do
     let discrTerm' : Syntax.Term ← delabDetailed discrTerm
@@ -790,6 +790,23 @@ def groupCasesGoals (goal: MVarId) (context : Array Json) (conds: List String)
       let tailGoals ← groupCasesGoals (splitGoals.get! 1) context t qp
       return splitGoals.get! 0 :: tailGoals
 
+def _root_.Lean.Json.getJsonList? (js: Json) (key: String) :
+  Except String (List Json) :=
+  match js.getObjValAs? (List Json) key with
+  | Except.ok arr => Except.ok arr
+  | Except.error e =>
+    match js.getKV? with
+    | some (k, v) =>
+      if k.containsSubstr "doc" then
+        v.getObjValAs? (List Json) key
+      else
+        Except.error s!"Expected key `doc` in {js.compress}, found {k} instead"
+    | none => Except.error e
+
+
+#check String.containsSubstr "hello" "hel"
+
+#check Json.getObj?
 
 namespace expr
 
@@ -943,7 +960,7 @@ mutual
                 match js.getKV? with
                 | some ("case", js) =>
                   match js.getObjString? "condition",
-                    js.getObjValAs? (List Json) "proof" with
+                    js.getJsonList? "proof" with
                   | some cond, Except.ok pfSource => do
                     let pf ← structToTactics newGoal #[] context pfSource qp
                     pure <| some (cond, pf)
@@ -959,7 +976,7 @@ mutual
               | some "group" =>
                 let exType ← exhaustiveType goal context conds.toList qp
                 let union_pf : Array Syntax.Tactic ←
-                  match head.getObjValAs? (List Json) "exhaustiveness" with
+                  match head.getJsonList? "exhaustiveness" with
                   | Except.ok pfSource =>
                     let mvar ← mkFreshExprMVar exType
                     structToTactics mvar.mvarId! #[] context pfSource qp
@@ -991,7 +1008,7 @@ mutual
                 match js.getKV? with
                 | some ("case", js) =>
                   match js.getObjString? "condition",
-                    js.getObjValAs? (List Json) "proof" with
+                    js.getJsonList? "proof" with
                   | some cond, Except.ok pfSource => do
                     let pf ← structToTactics newGoal #[] context pfSource qp
                     return some (cond, pf)
@@ -1001,7 +1018,7 @@ mutual
             | _, _ => pure #[]
           | some ("contradiction", head) =>
             match head.getObjValAs? String "assumption",
-              head.getObjValAs? (List Json) "proof" with
+              head.getJsonList? "proof" with
             | Except.ok s, Except.ok pf => do
               let fe := mkIdent ``False.elim
               let newGoals ← runAndGetMVars goal #[← `(tactic|apply $fe)] 1
@@ -1146,7 +1163,7 @@ mutual
                 match js.getKV? with
                 | some ("case", js) =>
                   match js.getObjString? "condition",
-                    js.getObjValAs? (List Json) "proof" with
+                    js.getJsonList? "proof" with
                   | some cond, Except.ok pfSource => do
                     let pf ← structToTactics #[] context pfSource qp goal?
                     pure <| some (cond, pf)
@@ -1161,7 +1178,7 @@ mutual
                 | _ => pure #[]
               | some "group" =>
                 let union_pf : Array Syntax.Tactic ←
-                  match head.getObjValAs? (List Json) "exhaustiveness" with
+                  match head.getJsonList? "exhaustiveness" with
                   | Except.ok pfSource =>
                     structToTactics #[] context pfSource qp goal?
                   | _ => pure #[← `(tactic| auto?)]
@@ -1186,7 +1203,7 @@ mutual
                 match js.getKV? with
                 | some ("case", js) =>
                   match js.getObjString? "condition",
-                    js.getObjValAs? (List Json) "proof" with
+                    js.getJsonList? "proof" with
                   | some cond, Except.ok pfSource => do
                     let pf ← structToTactics #[] context pfSource qp goal?
                     return some (cond, pf)
@@ -1196,7 +1213,7 @@ mutual
             | _, _ => pure #[]
           | some ("contradiction", head) =>
             match head.getObjValAs? String "assumption",
-              head.getObjValAs? (List Json) "proof" with
+              head.getJsonList? "proof" with
             | Except.ok s, Except.ok pf =>
               let proof ← structToTactics #[] context pf qp goal?
               contradictionTactics s proof context qp
@@ -1280,7 +1297,7 @@ set_option linter.unusedVariables false in
 def eg_drop (n m: Nat)  := dl! (∀ n m: Nat, n = n + 1 → False)
 
 def thmProofStrucToCode (thm pf: String) (js: Json) (qp: CodeGenerator):
-    TranslateM <| Format := do
+    TranslateM <| Format × Name := do
     let mut fmt : Format := s!"/-!\n## Theorem\n{thm}"
     fmt := fmt ++ "\n## Proof\n" ++ pf ++ "\n"
     fmt := fmt ++ "\n## JSON structured proof\n" ++ js.pretty ++ "-/\n"
@@ -1288,7 +1305,8 @@ def thmProofStrucToCode (thm pf: String) (js: Json) (qp: CodeGenerator):
     let (code, names) ← mathDocumentCode js qp
     fmt := fmt ++ code
     -- IO.println fmt
-    let (exprs, msgLogs) ← elabFrontDefsExprM code.pretty names.toList
+    let (exprs, msgLogs) ←
+      elabFrontDefsExprM code.pretty names.toList
     fmt := fmt ++ "\n\n/-!\n## Elaboration logs\n"
     for msg in msgLogs.toList do
       fmt := fmt ++ (← msg.data.format) ++ "\n"
@@ -1299,10 +1317,10 @@ def thmProofStrucToCode (thm pf: String) (js: Json) (qp: CodeGenerator):
       for s in sorries do
         fmt := fmt ++ "\n "++ s!"* `{← PrettyPrinter.ppExpr s}`".replace "\n" " "
     fmt := fmt ++ "\n-/\n"
-    return topCode ++ fmt
+    return (topCode ++ fmt, names[0]!)
 
 def statementToCode (s: String) (qp: CodeGenerator) :
-  TranslateM <| Format  := do
+  TranslateM <| Format × Name := do
     let xs ← qp.server.structuredProofFromStatement s
     match xs.get? 0 with
     | some (pf, #[js]) =>
@@ -1310,7 +1328,7 @@ def statementToCode (s: String) (qp: CodeGenerator) :
     | _ =>
       let fmt := s!"/-!\n## Theorem\n{s}" ++ "No structured proof found"
       IO.println fmt
-      return fmt
+      return (fmt, s!"failure_{hash s}".toName)
 
 -- #check MVarId.introN
 
